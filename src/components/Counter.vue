@@ -3,7 +3,9 @@ export default {
   name: 'Counter',
   data() {
     return {
-      count: 0
+      count: 0,
+      minValue: -10,
+      maxValue: 12
     }
   },
   methods: {
@@ -25,14 +27,16 @@ export default {
 
 <template>
 <div class="counter">
-    <h2 data-testid="counter-title">Счетчик: {{ count }}</h2>
+    <h2 data-qa="counter-title">Счетчик: {{ count }}</h2>
     <div class="counter-buttons">
-        <button @click="decrement" class="btn btn-decrement" data-testid="btn-decrement">-</button>
-        <button @click="reset" class="btn btn-reset" data-testid="btn-reset">Сбросить</button>
-        <button @click="increment" class="btn btn-increment" data-testid="btn-increment">+</button>
+        <button @click="decrement" class="btn btn-decrement" data-qa="btn-decrement" :disabled="count <= minValue">-</button>
+        <button @click="reset" class="btn btn-reset" data-qa="btn-reset">Сбросить</button>
+        <button @click="increment" class="btn btn-increment" data-qa="btn-increment" :disabled="count >= maxValue">+</button>
     </div>
-    <p data-testid="counter-value">Текущее значение: {{ count }}</p>
-    <p class="counter-message" v-if="count > 10" data-testid="counter-message"> Счетчик превысил 10 🎉</p>
+    <p v-if="count === minValue" data-qa="min-message">Достигнуто минимальное значение</p>
+    <p v-if="count === maxValue" data-qa="max-message">Достигнуто максимальное значение</p>
+    <p data-qa="counter-value">Текущее значение: {{ count }}</p>
+    <p class="counter-message" v-if="count > 10" data-qa="counter-message"> Счетчик превысил 10 🎉</p>
 </div>
 </template>
 
