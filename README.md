@@ -27,3 +27,12 @@ npm run dev
 ```sh
 npm run build
 ```
+
+### Testing
+
+```sh
+npm run test:unit
+```
+
+<img width="454" height="262" alt="image" src="https://github.com/user-attachments/assets/4e6f1274-3b91-4449-b044-5151ffdc8439" />
+
