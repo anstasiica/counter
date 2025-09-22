@@ -25,13 +25,13 @@ export default {
 
 <template>
 <div class="counter">
-    <h2>Счетчик: {{ count }}</h2>
+    <h2 data-testid="counter-title">Счетчик: {{ count }}</h2>
     <div class="counter-buttons">
-        <button @click="decrement" class="btn btn-decrement">-</button>
-        <button @click="reset" class="btn btn-reset">Сбросить</button>
-        <button @click="increment" class="btn btn-increment">+</button>
+        <button @click="decrement" class="btn btn-decrement" data-testid="btn-decrement">-</button>
+        <button @click="reset" class="btn btn-reset" data-testid="btn-reset">Сбросить</button>
+        <button @click="increment" class="btn btn-increment" data-testid="btn-increment">+</button>
     </div>
-    <p class="counter-message" v-if="count > 10"> Счетчик превысил 10 🎉</p>
+    <p class="counter-message" v-if="count > 10" data-testid="counter-message"> Счетчик превысил 10 🎉</p>
 </div>
 </template>
 

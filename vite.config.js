@@ -10,7 +10,7 @@ export default defineConfig({
     vue(),
     vueDevTools(),
   ],
-  base: '/tasks-in-vue/', // Replace 'your-repo-name' with your actual repository name
+  base: '/counter/', // Replace 'your-repo-name' with your actual repository name
   resolve: {
     alias: {
       '@': fileURLToPath(new URL('./src', import.meta.url))
