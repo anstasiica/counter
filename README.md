@@ -36,3 +36,10 @@ npm run test:unit
 
 <img width="454" height="262" alt="image" src="https://github.com/user-attachments/assets/4e6f1274-3b91-4449-b044-5151ffdc8439" />
 
+```sh
+npm run test:e2e
+```
+
+<img width="263" height="161" alt="image" src="https://github.com/user-attachments/assets/1d4cde81-f96e-4809-99cb-4ac84e8d8134" />
+<img width="520" height="597" alt="image" src="https://github.com/user-attachments/assets/3c01226f-a739-49dd-906c-b014f03985e1" />
+
