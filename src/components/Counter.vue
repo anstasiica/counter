@@ -31,6 +31,7 @@ export default {
         <button @click="reset" class="btn btn-reset" data-testid="btn-reset">Сбросить</button>
         <button @click="increment" class="btn btn-increment" data-testid="btn-increment">+</button>
     </div>
+    <p data-testid="counter-value">Текущее значение: {{ count }}</p>
     <p class="counter-message" v-if="count > 10" data-testid="counter-message"> Счетчик превысил 10 🎉</p>
 </div>
 </template>
